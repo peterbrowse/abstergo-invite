@@ -7,7 +7,7 @@ button,
 input,
 select,
 textarea {
-    color: #222;
+    color: #000;
 }
 
 body {
@@ -15,13 +15,13 @@ body {
     line-height: 1.4;
 }
 
-::-moz-selection {
-    background: #b3d4fc;
+input::-moz-selection {
+    background: #FFF;
     text-shadow: none;
 }
 
-::selection {
-    background: #b3d4fc;
+input::selection {
+    background: #FFF;
     text-shadow: none;
 }
 
@@ -59,22 +59,22 @@ textarea {
 /* ===== Initializr Styles ==================================================
    Author: Jonathan Verrecchia - verekia.com/initializr/responsive-template
    ========================================================================== */
+@import url(http://fonts.googleapis.com/css?family=Inconsolata:400,700);
 
 body {
-    font: 16px/26px Helvetica, Helvetica Neue, Arial;
-    background-color: #d5d5d5;
+    font: 16px/26px normal 'Inconsolata', Helvetica, Helvetica Neue, Arial;
 }
 
 .wrapper {
-    width: 90%;
-    margin: 0 5%;
+    width: 100%;
+    margin: 0;
 }
 /* ==============
     MOBILE: Main
    ============== */
 
 .main {
-    padding: 30px 0;
+    padding: 0;
 }
 
 /* ===============
@@ -88,20 +88,174 @@ body {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+   
+#bg-container {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	z-index: 0;
+    background: #d5d5d5 url('/img/white_logo.png') no-repeat center center;
+    overflow: hidden;
+}
 
+.form-holder {
+	position: relative;
+	z-index: 100;
+	border: 1px solid #000000;
+	width: 300px;
+	margin: auto;
+	display: none;
+}
+.form-header {
+	height: 27px;
+	border-bottom: 1px solid #717171;
+	background: #9a9a9a;
+	padding: 0px 5px 0px 5px;
+}
+	.form-header img.left {
+		float: left;
+	}
+	
+	.form-header img.right {
+		float: right;
+		cursor: pointer;
+	}
+.screen {
+	display: none;
+}
+.screen-one {
+	display: block;
+}
+.form-content-area {
+	background: #b6b6b6;
+}
+	.form-content-area-inner {
+		text-align: center;
+		border-top: solid 1px #000;
+	}
+		img.white_logo_img {
+			padding-top: 20px;
+			padding-bottom: 30px;
+		}
+	.form-content-area-inner h1 {
+		margin: 0px;
+		text-align: left;
+		margin-left: 20px;
+		margin-right: 20px;
+		font-family: 'Inconsolata', Helvetica, Helvetica Neue, Arial;
+		text-transform: uppercase;
+		font-weight: 400;
+		font-size: 25px;
+		padding-bottom: 15px;
+	}
+	
+	.form-content-area-inner p {
+		margin: 0px;
+		text-align: left;
+		margin-left: 20px;
+		margin-right: 20px;
+		font-size: 16px;
+		line-height: 20px;
+		padding-bottom: 30px;
+	}
+		
+	.form-content-button-area {
+		border-top: 1px solid #000;
+		border-bottom: 1px solid #717171;
+		background: #9a9a9a;
+		padding: 20px;
+		padding-bottom: 0px;
+	}
+	
+	
+	
+		.button-holder {
+			width: 70%;
+			padding: 5px;
+			margin: auto;
+			margin-bottom: 20px;
+			-webkit-border-radius: 2px;
+			-moz-border-radius: 2px;
+			border-radius: 2px;
+			background: rgba(179,179,179,1);
+background: -moz-linear-gradient(-45deg, rgba(179,179,179,1) 0%, rgba(109,109,109,1) 42%, rgba(109,109,109,1) 51%, rgba(109,109,109,1) 71%, rgba(109,109,109,1) 100%);
+background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(179,179,179,1)), color-stop(42%, rgba(109,109,109,1)), color-stop(51%, rgba(109,109,109,1)), color-stop(71%, rgba(109,109,109,1)), color-stop(100%, rgba(109,109,109,1)));
+background: -webkit-linear-gradient(-45deg, rgba(179,179,179,1) 0%, rgba(109,109,109,1) 42%, rgba(109,109,109,1) 51%, rgba(109,109,109,1) 71%, rgba(109,109,109,1) 100%);
+background: -o-linear-gradient(-45deg, rgba(179,179,179,1) 0%, rgba(109,109,109,1) 42%, rgba(109,109,109,1) 51%, rgba(109,109,109,1) 71%, rgba(109,109,109,1) 100%);
+background: -ms-linear-gradient(-45deg, rgba(179,179,179,1) 0%, rgba(109,109,109,1) 42%, rgba(109,109,109,1) 51%, rgba(109,109,109,1) 71%, rgba(109,109,109,1) 100%);
+background: linear-gradient(135deg, rgba(179,179,179,1) 0%, rgba(109,109,109,1) 42%, rgba(109,109,109,1) 51%, rgba(109,109,109,1) 71%, rgba(109,109,109,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3b3b3', endColorstr='#6d6d6d', GradientType=1 );
+		}
+		
+		.button {
+			background-color: #FFF;
+			border: 1px solid #686868;
+			border-left: 1px solid #8c8c8c;
+			cursor: pointer;
+			padding: 10px;	
+		}
+			.button p, .form-content-button-area a {
+				line-height: 17px !important;
+				font-size: 17px !important;
+				text-transform: uppercase;
+				margin: 0 !important;
+				padding: 0 !important;
+				color: #000;
+				text-decoration: none;
+			}
+			
+		.screen-two h1, .screen-three h1 {
+			font-size: 16px;
+			line-height: 16px;
+			text-transform: uppercase;
+		}
+		
+		.screen-two p, .screen-three p {
+			line-height: 14px;
+			font-size: 12px;
+			text-transform: uppercase;
+		}
+		
+		.screen-three p {
+			padding-bottom: 10px;
+		}
+		
+		.screen input {
+			background-color: #000;
+			border: none;
+			margin-bottom: 20px;
+			width: 80%;
+			padding: 10px;
+			text-transform: uppercase;
+			font-size: 12px;
+			color: #FFF;
+		}
+		
+		.screen-three input {
+			margin-bottom: 0px;
+		}
+		
+		.screen label {
+			float: left;
+			margin-left: 20px;
+			margin-right: 20px;
+			text-transform: uppercase;
+			font-size: 12px;
+			color: #FFF;
+		}
+		
+		.error-message p {
+			color: #e04a21;
+			text-transform: uppercase;
+		}
 
-
-
-
-
-
-
-
-
-
-
-
-
+.minimised {
+	position: absolute;
+	left: 0px;
+	bottom: 0px;
+}
 
 /* ==========================================================================
    Media Queries
@@ -139,47 +293,6 @@ body {
 
     .oldie nav a {
         margin: 0 0.7%;
-    }
-}
-
-@media only screen and (min-width: 768px) {
-
-/* ====================
-    WIDE: CSS3 Effects
-   ==================== */
-
-    .header-container,
-    .main aside {
-        -webkit-box-shadow: 0 5px 10px #aaa;
-           -moz-box-shadow: 0 5px 10px #aaa;
-                box-shadow: 0 5px 10px #aaa;
-    }
-
-/* ============
-    WIDE: Menu
-   ============ */
-
-    .title {
-        float: left;
-    }
-
-    nav {
-        float: right;
-        width: 38%;
-    }
-
-/* ============
-    WIDE: Main
-   ============ */
-
-    .main article {
-        float: left;
-        width: 57%;
-    }
-
-    .main aside {
-        float: right;
-        width: 28%;
     }
 }
 
@@ -326,13 +439,4 @@ body {
     h3 {
         page-break-after: avoid;
     }
-}
-
-#bg-container {
-	position: absolute;
-	top: 0px;
-	left: 0px;
-	right: 0px;
-	bottom: 0px;
-	z-index: 0;
 }
